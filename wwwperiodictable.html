@@ -1,0 +1,343 @@
+<!doctype HTML>
+<html>
+<style>
+table { transform: rotate(90deg) scaleY(-1) }
+table th, table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
+body { margin-left: 7vw; }
+td { width: 10vw; height: 10vw; }
+table { border-spacing: 1px 4px; }
+
+body { font-family: Arial, sans-serif; }
+
+dt { font-size: xxx-large; font-weight: bold} 
+dd { margin-inline-start: 0px; }
+
+td { text-align: center; }
+
+/*
+td { --left-padding: 0.5vw; }
+time { display: block; text-align: left; padding-left: var(--left-padding); position: absolute; top: 0.5vw; }
+dt { font-size: xxx-large; font-weight: bold; text-align: center;}
+dd { display: block; margin-inline-start: 0px; position: relative; padding-left: var(--left-padding);*//* text-align: center; }*/
+
+
+
+td { background-color: var(--color); color: white; outline: 1px solid var(--color); }
+.other { --color: grey; } /* default/other */
+.all { --color: olive; }
+.allbutie11 { --color: darkolivegreen; }
+.somebrowsers { --color: #18472d; }
+.chrome { --color: dodgerblue; }
+.proprietary { --color: dodgerblue; } 
+.partial { --color: slategray; }
+.inprogress { --color: maroon; }
+.none { --color: #0d0d0d; }
+
+.key div { display: block; height: 1vw; width: 1vw; background-color: var(--color); }
+</style>
+<div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
+<h2>Web Periodic Table v0.0.1</h2>
+<div class="key">
+    <h3>Key</h3>
+    <div class="all"></div> Supported by all browsers including IE11
+    <div class="allbutie11"></div> Supported by all browsers
+    <div class="somebrowsers"></div> Supported by two modern browsers
+    <div class="partial"></div> Partial support
+    <div class="none"></div> No support
+    <div class="inprogress"></div> Implementation is in progress
+    <div class="chrome"></div> Supported only by Google Chrome
+    <div class="proprietary"></div> Proprietary
+</div>
+    <table>
+        <thead>
+            <tr>
+                <th colspan=8 style="display: block; writing-mode: vertical-rl; text-orientation: sideways;">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Markup</th>
+                <td class="all">
+                   <time>2001</time>
+                    <dt>Hx</dt>
+                    <dd>XHTML</dd>
+                </td>
+                <td class="all">
+                    <time>2020</time>
+                    <dt>Ht</dt>
+                    <dd>HTML5</dd>
+                </td>
+                <td class="all">
+                    <time>2011</time>
+                    <dt>Sv</dt>
+                    <dd>SVG1.1</dd>
+                </td>
+                <td class="partial">
+                    <time>2014</time>
+                    <dt>Ma</dt>
+                    <dd>MathML3.0</dd>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td class="partial">
+                    <time>2018</time>
+                     <dt>Sv2</dtd>
+                     <dd>SVG2</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Styling</th>
+                <td>
+                </td>
+                <td class="all">
+                    <time>2015</time>
+                    <dt>Cs</dt>
+                    <dd>CSS</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2017</time>
+                    <dt>Lt</dt>
+                    <dd>XSLT</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2020</time>
+                    <dt>Ly</dt>
+                    <dd>CSS Grid and Flexbox</dd>
+                </td>
+                <td class="none">
+                    <time>2020</time>
+                    <dt>C4</dt>
+                    <dd>Selectors Level 4, Lists and Counters Level 3</dd>
+                </td>
+                <td class="somebrowsers">
+                    <time>2020</time>
+                    <dt>Ho</dt>
+                    <dd>CSS Houdini</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Graphics API</th>
+                <td>
+                </td>
+                <td class="all">
+                    <time>2020</time>
+                    <dt>C2</dt>
+                    <dd>Canvas2D</dd>
+                </td>
+                <td class="all">
+                    <time>2017</time>
+                    <dt>Gl</dt>
+                    <dd>WebGL</dd>
+                </td>
+                <td class="somebrowsers">
+                    <time>2020</time>
+                    <dt>Gl2</dt>
+                    <dd>WebGL2</dd>
+                </td>
+                <td class="inprogress">
+                    <time>2020</time>
+                    <dt>Xr</dt>
+                    <dd>WebXR</dd>
+                </td>
+                <td class="inprogress">
+                    <time>2020</time>
+                    <dt>Gp</dt>
+                    <dd>WebGPU</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Network API</th>
+                <td class="all">
+                    <time>2016</time>
+                    <dt>Xhr</dt>
+                    <dd>XMLHTTPRequest</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2010</time>
+                    <dt>Sse</dt>
+                    <dd>Server-Sent Events</dd>
+                </td>
+                <td class="all">
+                    <time>2011</time>
+                    <dt>Ws</dt>
+                    <dd>WebSocket</dd>
+                <td>
+                <td class="allbutie11">
+                    <time>2020</time>
+                    <dt>Fe</dt>
+                    <dd>Fetch</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2020</time>
+                    <dt>Rtc</dt>
+                    <dd>WebRTC</dd>
+                </td>
+                <td class="none">
+                    <time>2020</time>
+                    <dt>T</dt>
+                    <dd>WebTransport</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Social</th>
+                <td></td>
+                <td class="other">
+                    <time>2011</time>
+                    <dt>Rss</dt>
+                    <dd>RSS</dd>
+                </td>
+                <td class="other">
+                    <time>2017</time>
+                    <dt>Mn</dt>
+                    <dd>WebMention</dd>
+                </td>
+                <td class="other">
+                    <time>2018</time>
+                    <dt>Sb</dt>
+                    <dd>WebSub</dd>
+                </td>
+                <td class="other">
+                    <time>2018</time>
+                    <dt>Ap</dt>
+                    <dd>ActivityPub</dd>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td class="proprietary">
+                    <time>2020</time>
+                    <dt>Fb</dt>
+                    <dd>Facebook</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Persistence</th>
+                <td class="all">
+                    <time>2020</time>
+                    <dt>Co</dt>
+                    <dd>Cookies</dd>
+                </td>
+                <td class="all">
+                    <time>2016</time>
+                    <dt>Ls</dt>
+                    <dd>LocalStorage</dd>
+                </td>
+                <td class="all">
+                    <time>2020</time>
+                    <dt>Idb</dt>
+                    <dd>IndexedDB</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2020</time>
+                    <dt>Fs</dt>
+                    <dd>FileSystem API</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Scripting</th>
+                <td>
+                </td>
+                <td class="all">
+                    <time>2014</time>
+                    <dt>Js</dt>
+                    <dd>JavaScript</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2018</time>
+                    <dt>Es</dt>
+                    <dd><code>=&gt;</code> <code>WeakMap</code> <code>Proxy</code> <code>import</code> <code>class</code> <code>async</code> <code>...</code></dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2020</time>
+                    <dt>As</dt>
+                    <dd>WASM</dd>
+                </td>
+                <td class="somebrowsers">
+                    <time>2020</time>
+                    <dt>Ns</dt>
+                    <dd>ES.Next <code>Intl</code> <code>WeakRef</code> <code>Atomics</code> <code>??</code> <code>||=</code></dd>
+                </td>
+                <td>
+                </td>
+                <td class="deprecated none">
+                    <time>2005</time>
+                    <dt>JX</dt>
+                    <dd>E4X</dd>
+                </td>
+                <td class="none">
+                    <time>2015</time>
+                    <dt>Pn</dt>
+                    <dd>PNaCL</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Offline</th>
+                <td class="all">
+                    <time>2017</time>
+                    <dt>Hc</dt>
+                    <dd>HTTP Cache-Control, ETag</dd>
+                </td>
+                <td class="somebrowsers">
+                    <time>2020</time>
+                    <dt>Ni</dt>
+                    <dd>Network status (wifi, cellular, offline)</dd>
+                </td>
+                <td class="allbutie11">
+                    <time>2020</time>
+                    <dt>Sw</dt>
+                    <dd>Service Workers</dd>
+                </td>
+                <td class="somebrowsers">
+                    <time>2020</time>
+                    <dt>Pwa</dt>
+                    <dd>Add to home screen</dd>
+                </td>
+                <td class="somebrowsers">
+                    <time>2020</time>
+                    <dt>Pu</dt>
+                    <dd>Push API</dd>
+                </td>
+                <td class="chrome">
+                    <time>2020</time>
+                    <dt>Ba</dt>
+                    <dd>Background Sync</dd>
+                </td>
+                <td class="deprecated none">
+                    <time>2020</time>
+                    <dt>Ac</dt>
+                    <dd>Application Cache</dd>
+                </td>
+                <td class="depcreated chrome none">
+                    <time>2010</time>
+                    <dt>Ge</dt>
+                    <dd>Gears</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Semantic</th>
+                <td class="all">
+                    <time>1999</time>
+                    <dt>He</dt>
+                    <dd>Last-Modified, Content-Language</dd>
+                </td>
+                <td class="all">
+                    <time>2011</time>
+                    <dt>Me</dt>
+                    <dd><code>&lt;meta/&gt;</code> name, keywords, description, http-equiv</dd>
+                </td>
+                <td class="other">
+                    <time>2018</time>
+                    <dt>Mc</dt>
+                    <dd>Microdata</dd>
+                </td>
+                <td class="other">
+                    <time>2020</time>
+                    <dt>Ol</dt>
+                    <dd>RDF and OWL</dd>
+                </td>
+        </tbody>
+    </table>
+</html>
