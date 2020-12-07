@@ -42,22 +42,22 @@ td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; 
 /* Reduce hit area sie of dd */
 td dd { display: inline; }
 
-.key div { display: block; height: 1vw; width: 1vw; background-color: var(--color); }
+.key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
 <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
 <h2>Web Periodic Table v0.0.1</h2>
 <h3>Map of the Web</h3>
 <div class="key">
     <h3>Key</h3>
-    <div class="all"></div> Supported by all browsers including IE11
-    <div class="allbutie11"></div> Supported by all browsers
-    <div class="somebrowsers"></div> Supported by two modern browsers
-    <div class="inprogress"></div> Implementation is in progress
-    <div class="proposal"></div> Being discussed or proposed
-    <div class="partial"></div> Partial support
-    <div class="none"></div> No support
-    <div class="chrome"></div> Supported only by Google Chrome
-    <div class="proprietary"></div> Proprietary
+    <div class="all"> Supported by all browsers including IE11</div>
+    <div class="allbutie11"> Supported by all browsers</div>
+    <div class="somebrowsers"> Supported by two modern browsers</div>
+    <div class="inprogress"> Implementation is in progress</div>
+    <div class="proposal"> Being discussed or proposed</div>
+    <div class="partial"> Partial support</div>
+    <div class="none"> No support</div>
+    <div class="chrome"> Supported only by Google Chrome</div>
+    <div class="proprietary"> Proprietary</div>
 </div>
     <table>
         <thead>
