@@ -36,6 +36,10 @@ a { color: white; }
 .inprogress { --color: maroon; }
 .none { --color: #0d0d0d; }
 
+td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; }
+/* Reduce hit area sie of dd */
+td dd { display: inline; }
+
 .key div { display: block; height: 1vw; width: 1vw; background-color: var(--color); }
 </style>
 <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
@@ -76,9 +80,10 @@ a { color: white; }
                     <dd>SVG1.1</dd>
                 </td>
                 <td class="partial">
-                    <time>2014</time>
+                    <a href="https://caniuse.com/?search=mathml"></a>
+                    <time><a href="https://www.w3.org/TR/MathML3/">2014</a></time>
                     <dt>Ma</dt>
-                    <dd>MathML3.0</dd>
+                    <dd><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML3.0</a></dd>
                 </td>
                 <td>
                 </td>
