@@ -1,4 +1,5 @@
 # [Periodic Table of the Web](https://wwwperiodictable.surge.sh/)
+## Map of Web APIs/Technologies
 The columns are organized left-to-right by the date an API in that column was first implemented.
 The rows are organized by the date they were first proposed.
 
