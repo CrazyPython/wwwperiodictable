@@ -1,5 +1,5 @@
 <!doctype HTML>
-<html>
+<html lang=en>
     <!-- Hi there, kind visitor! If you scroll down to <table>, you'll find nicely written markup. Feel free to contribute! -->
     <title>Periodic Table of the Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -7,15 +7,19 @@
 <style>
 /* How this works is each column is actually a table row. The following CSS rotates and transforms the table so it looks normal. */
 table { transform: rotate(90deg) scaleY(-1) }
-table th, table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
+table th,
+table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
+/*table th { transform: rotate(-90deg) scaleY(1) scaleX(-1) rotate(-45deg); }*/
 body { margin-left: 7vw; }
 main { transform: translateX(17vw) translateY(-23vw); }
 
+/*th { max-width: 5vw; max-height: 10vw; }*/
 td { width: 10vw; height: 10vw; }
 table { border-spacing: 1px 4px; }
 body { font-family: Arial, sans-serif; }
 
-dt { font-size: xxx-large; font-weight: bold} 
+/*th { font-size: x-large; }*/
+dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
 
 td { text-align: center; }
@@ -26,6 +30,7 @@ time { display: block; text-align: left; padding-left: var(--left-padding); posi
 dt { font-size: xxx-large; font-weight: bold; text-align: center;}
 dd { display: block; margin-inline-start: 0px; position: relative; padding-left: var(--left-padding);*//* text-align: center; }*/
 
+/* Colors */
 td { background-color: var(--color); color: white; outline: 1px solid var(--color); }
 a { color: white; }
 .other { --color: grey; } /* default/other */
@@ -79,12 +84,12 @@ td dd { display: inline; }
                 <td class="all">
                     <time><a href="https://html.spec.whatwg.org/multipage/">2020</a></time>
                     <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">Ht</a></dt>
-                    <dd><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML5</a></dd>
+                    <dd><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML5</a> documents</dd>
                 </td>
                 <td class="all">
                     <time>2011</time>
                     <dt>Svg</dt>
-                    <dd>SVG1.1</dd>
+                    <dd>SVG1.1 vector graphics and document layout</dd>
                 </td>
                 <td class="partial">
                     <a href="https://caniuse.com/?search=mathml"></a>
@@ -236,7 +241,7 @@ td dd { display: inline; }
                 </td>
             </tr>
              <tr>
-                <th>Scripting</th>
+                 <th>Interactive/Dynamic<br>Scripts</th>
                 <td>
                 </td>
                 <td class="all">
@@ -403,11 +408,11 @@ td dd { display: inline; }
                 <td class="inprogress">
                     <time>2020</time>
                     <dt>Xr</dt>
-                    <dd>WebXR</dd>
+                    <dd>WebXR Augmented and Virtual Reality</dd>
                 </td>
                 <td class="inprogress">
                     <time>2020</time>
-                    <dt>Gp</dt>
+                    <dt>Gpu</dt>
                     <dd><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a></dd>
                 </td>
             </tr>
@@ -464,6 +469,11 @@ td dd { display: inline; }
                     <time>2020</time>
                     <dt>Bt</dt>
                     <dd>Web Bluetooth</dd>
+                </td>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>
                 </td>
             </tr>
         </tbody>
