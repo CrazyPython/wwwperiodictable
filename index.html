@@ -40,9 +40,10 @@ a { color: white; }
 .chrome { --color: dodgerblue; }
 .proprietary { --color: dodgerblue; } 
 .partial { --color: slategray; }
-.inprogress { --color: maroon; }
+.inprogress { --color: brown; }
 .none { --color: #0d0d0d; }
-.proposal { --color: brown; }
+.proposal { --color: maroon; }
+.chrome.inprogress { --color: darkviolet; }
 
 td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; }
 /* Reduce hit area sie of dd */
@@ -58,10 +59,11 @@ td dd { display: inline; }
     <div class="all"> Supported by all browsers including IE11</div>
     <div class="allbutie11"> Supported by all browsers</div>
     <div class="somebrowsers"> Supported by two modern browsers</div>
-    <div class="inprogress"> Implementation is in progress</div>
     <div class="proposal"> Being discussed or proposed</div>
+    <div class="inprogress"> Implementation is in progress</div>
     <div class="partial"> Partial support</div>
     <div class="none"> No support</div>
+    <div class="chrome inprogress"> Implementation in progrss in Google Chrome</div>
     <div class="chrome"> Supported only by Google Chrome</div>
     <div class="proprietary"> Proprietary</div>
 </div>
@@ -475,6 +477,11 @@ td dd { display: inline; }
                     <time><a href="https://w3c.github.io/web-nfc/">2020</a></time>
                     <dt>Nfc</dt>
                     <dd>Web NFC</dd>
+                </td>
+                <td class="chrome inprogress">
+                    <time><a href="https://wicg.github.io/serial/">2020</a></time>
+                    <dt>Sr</dt>
+                    <dd><a href="https://codelabs.developers.google.com/codelabs/web-serial/?hl=ro#0">Web Serial API</a></dd>
                 </td>
             </tr>
             <tr>
