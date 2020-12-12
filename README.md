@@ -13,5 +13,4 @@ The redness represents how active an API's proposal or specification is.
 * Date links to the Specification
 * Element abbreviation links to What can this do? (Demo, Playground, or Reference)
 * Details links to How can I learn this? Guide
-
-
+* Background links to browser support (For most APIs, caniuse.com. For in-progress APIs, implementation progress pages.)
