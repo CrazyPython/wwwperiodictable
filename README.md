@@ -1,6 +1,6 @@
 # [Periodic Table of the Web](https://wwwperiodictable.surge.sh/)
 ## Map of Web APIs/Technologies
-[![Watch on GitHub](https://img.shields.io/github/watchers/CrazyPython/wwwperiodictable?style=social&label=Watch)](https://github.com/CrazyPython/wwwperiodictable/subscription) 
+[![Watch on GitHub](https://img.shields.io/github/watchers/CrazyPython/wwwperiodictable?style=social&label=Get%20notified%20for%20updates)](https://github.com/CrazyPython/wwwperiodictable/subscription) 
 
 
 The columns are organized left-to-right by the date an API in that column was first implemented.
