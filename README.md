@@ -1,5 +1,8 @@
 # [Periodic Table of the Web](https://wwwperiodictable.surge.sh/)
 ## Map of Web APIs/Technologies
+[![Watch on GitHub](https://img.shields.io/github/watchers/tterb/playmusic.svg?style=social&label=Watch)](https://github.com/ntkme/github-buttons/subscription) 
+
+
 The columns are organized left-to-right by the date an API in that column was first implemented.
 The rows are organized by the date they were first proposed.
 
