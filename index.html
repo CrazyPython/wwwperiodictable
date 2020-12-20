@@ -13,6 +13,46 @@ table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
 body { margin-left: 8em; }
 main { transform: translateX(32ch) translateY(-50ch); }
 
+body{ background-image: linear-gradient(90deg, orange 60%, cyan); } /* Added a background colour */
+
+td:hover{                      
+    transform: rotate(-90deg) scaleY(1) scaleX(-1) scale(1.2);    /*made a nice hovering effect as we hover on the blocks*/
+    border: 2px solid maroon;
+}
+
+td{ transition: 1s; }
+
+.intro{                                 /*for making the top heading in center*/
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.key ul{
+    display: table;
+    margin: 0 auto;
+   list-style-type: none;
+
+}
+
+.marg{                                 /*for making the last part interactive*/
+    margin: 5px 0 0 35px;
+    font-size: 25px;
+    
+}
+
+
+.description{
+    margin: 10px 0 0 20px;
+    font-size: 40px;
+    color: red;
+}
+
+
+
+
+
 /*th { max-width: 5vw; max-height: 10vw; }*/
 td { width: 17ch; height: 17ch; }
 table { border-spacing: 1px 4px; }
@@ -50,22 +90,27 @@ td dd { display: inline; }
 
 .key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
+<body>
 <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
-<h2>Web Periodic Table v0.0.1</h2>
-<h3>Map of Web APIs/Technologies</h3>
+<div class="intro">
+<p style="font-size:50px; color: crimson">Web Periodic Table v0.0.1</p> <!--instead of having h3 heading i applied a paragraph and set the css-- -->
+<p style="font-size:35px">Map of Web APIs/Technologies</p></div>
 <div class="key">
-    <h3>Key</h3>
-    <div class="all"> Supported by all browsers including IE11</div>
-    <div class="allbutie11"> Supported by all browsers</div>
-    <div class="somebrowsers"> Supported by two modern browsers</div>
-    <div class="proposal"> Being discussed or proposed</div>
-    <div class="inprogress"> Implementation is in progress</div>
-    <div class="partial"> Partial support</div>
-    <div class="none"> No support</div>
-    <div class="chrome inprogress"> Implementation in progress in Google Chrome</div>
-    <div class="chrome"> Supported only by Google Chrome</div>
-    <div class="proprietary"> Proprietary</div>
+    <p style="font-size: 25px; text-align: center">Key</p>
+    <ul>
+    <li><div class="all"> Supported by all browsers including IE11</div></li>
+    <li><div class="allbutie11"> Supported by all browsers</div></li>
+    <li><div class="somebrowsers"> Supported by two modern browsers</div></li>
+    <li><div class="proposal"> Being discussed or proposed</div></li>
+    <li><div class="inprogress"> Implementation is in progress</div></li>
+    <li><div class="partial"> Partial support</div></li>
+    <li><div class="none"> No support</div></li>
+    <li><div class="chrome inprogress"> Implementation in progress in Google Chrome</div></li>
+    <li><div class="chrome"> Supported only by Google Chrome</div></li>
+    <li><div class="proprietary"> Proprietary</div></li>
+    </ul>
 </div>
+
 <main>
     <table>
         <thead>
@@ -502,19 +547,20 @@ td dd { display: inline; }
     </table>
 </main>
 <div style="position: relative; bottom: 90ch">
-<h3>How is it organized?</h3>
-<p>Just like a real periodic table, the positioning has a meaning.</p>
+<p class="description">How is it organized?</p>  <!--replaced the heading tag with a paragraph tag so that will able to add some styling-->
+<p class="marg">-Just like a real periodic table, the positioning has a meaning.</p>
 
-<p>The columns are organized left-to-right by the date an API in that column was first implemented. Older first. <br>
+<p class="marg">-The columns are organized left-to-right by the date an API in that column was first implemented. Older first. <br>
 The rows are organized by the date they were first proposed.</p>
 
-<p>The first row represents technologies that still work, but are superseded or obsoleted by newer technologies. <br>
+<p class="marg">-The first row represents technologies that still work, but are superseded or obsoleted by newer technologies. <br>
 The second-to-last row is deprecated or abandoned APIs. These may have been implemented before and removed, or only partly implemented.<br>
 The last row is for APIs that only ever worked in one browser. Many of these are proprietary or vendor-specific APIs.</p>
 
-<p>The darkness and lightness represents the browser support of an API. The redness represents how active an API's proposal or specification is.</p>
-<h3>What do the colors represent?</h3>
-<p>The lighter the color, the more support there is.</p>
-<p>The red represents how active the specification or proposal is.</p>
+<p class="marg">-The darkness and lightness represents the browser support of an API. The redness represents how active an API's proposal or specification is.</p>
+<p class="description">What do the colors represent?</p> <!--replaced the heading tag with a paragraph tag so that will able to add some styling-->
+<p class="marg">-The lighter the color, the more support there is.</p>
+<p class="marg">-The red represents how active the specification or proposal is.</p>
 </div>
+</body>
 </html>
