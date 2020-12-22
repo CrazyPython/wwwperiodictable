@@ -20,6 +20,26 @@ body { font-family: Arial, sans-serif; }
 
 body{ background-image: linear-gradient(90deg, orange 60%, cyan); } /* Added a background colour */
 
+.intro{                                 /*for making the top heading in center*/
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+}
+
+
+footer>p{                                 /*for making the last part interactive*/
+    margin: 5px 0 0 35px;
+    font-size: 25px;
+    
+}
+
+
+footer>h3{
+    margin: 10px 0 0 20px;
+    font-size: 40px;
+    color: red;
+}
+
 /*th { font-size: x-large; }*/
 dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
@@ -54,8 +74,8 @@ td dd { display: inline; }
 </style>
 <body>
 <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
-<h2>Web Periodic Table v0.0.1</h2>
-<h3>Map of Web APIs/Technologies</h3>
+<div class="intro"><h2 style="font-size:50px; color: crimson">Web Periodic Table v0.0.1</h2>
+<h3 style="font-size:35px">Map of Web APIs/Technologies</h3></div>
 <div class="key">
     <h3>Key</h3>
     <div class="all"> Supported by all browsers including IE11</div>
@@ -505,6 +525,7 @@ td dd { display: inline; }
     </table>
 </main>
 <div style="position: relative; bottom: 90ch">
+<footer>
 <h3>How is it organized?</h3>
 <p>Just like a real periodic table, the positioning has a meaning.</p>
 
@@ -519,6 +540,7 @@ The last row is for APIs that only ever worked in one browser. Many of these are
 <h3>What do the colors represent?</h3>
 <p>The lighter the color, the more support there is.</p>
 <p>The red represents how active the specification or proposal is.</p>
+</footer>
 </div>
 </body>
 </html>
