@@ -20,6 +20,8 @@ td { width: 17ch; height: 17ch; }
 table { border-spacing: 1px 4px; }
 body { font-family: Arial, sans-serif; }
 
+body{ background-image: linear-gradient(90deg, orange 60%, cyan); } /* Added a background colour */
+
 /*th { font-size: x-large; }*/
 dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
@@ -61,6 +63,7 @@ td dd { display: inline; }
 
 .key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
+<body>
 <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
 <h2>Periodic Table of Web APIs v0.0.1</h2>
 <h3>Map of Web APIs/Technologies</h3>
@@ -528,4 +531,5 @@ The last row is for APIs that only ever worked in one browser. Many of these are
 <p>The lighter the color, the more support there is.</p>
 <p>The red represents how active the specification or proposal is.</p>
 </div>
+</body>
 </html>
