@@ -32,19 +32,19 @@ dt { font-size: xxx-large; font-weight: bold; text-align: center;}
 dd { display: block; margin-inline-start: 0px; position: relative; padding-left: var(--left-padding);*//* text-align: center; }*/
 
 /* Colors */
-td { background-color: var(--color); color: white; outline: 1px solid var(--color); }
-table a { color: white; }
-.other { --color: grey; } /* default/other */
-.all { --color: olive; }
-.allbutie11 { --color: darkolivegreen; }
-.somebrowsers { --color: #18472d; }
-.chrome { --color: dodgerblue; }
-.proprietary { --color: dodgerblue; } 
-.partial { --color: slategray; }
-.inprogress { --color: brown; }
-.none { --color: #0d0d0d; }
-.proposal { --color: maroon; }
-.chrome.inprogress { --color: darkviolet; }
+td { background-color: var(--color); color: var(--text); outline: 1px solid var(--color); }
+table a { color: inherit; }
+.other { --color: darkmagenta;  --text: white; } /* default/other */
+.all { --color: #62BD69; --text: black; }
+.allbutie11 { --color:  #237948; --text: white;}
+.somebrowsers { --color: #0c3823; --text: white;}
+.chrome { --color: #FFAC4A; --text: black;}
+.proprietary { --color: dodgerblue; --text: black;} 
+.partial { --color: slategray; --text: black;}
+.inprogress { --color: #ba2420; --text: white;}
+.none { --color: #0d0d0d; --text: white;}
+.proposal { --color: #7a0400; --text: white;}
+.chrome.inprogress { --color: #FD5602; --text: black;}
 
 td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; }
 /* Reduce hit area sie of dd */
