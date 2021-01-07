@@ -25,6 +25,14 @@ dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
 
 td { text-align: center; }
+
+td:hover{                      
+    transform: rotate(-90deg) scaleY(1) scaleX(-1) scale(1.2);    /*made a nice hovering effect as we hover on the blocks*/
+    border: 2px solid maroon;
+}
+
+td{ transition: 1s; }
+
 /*
 td { --left-padding: 0.5vw; }
 time { display: block; text-align: left; padding-left: var(--left-padding); position: absolute; top: 0.5vw; }
