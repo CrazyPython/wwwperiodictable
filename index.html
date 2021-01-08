@@ -1,6 +1,6 @@
 <!doctype HTML>
 <html lang=en>
-    <!-- Hi there, kind visitor! If you scroll down to <table>, you'll find nicely written markup. Feel free to contribute! -->
+    <!-- Hi there, kind visitor! If you scroll down to .table, you'll find nicely written markup. Feel free to contribute! -->
     <title>Periodic Table of Web APIs</title>
     <meta name="keywords" content="web, www, visualization, map, perodic, api, html, css, javascript">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -18,36 +18,15 @@ header{ margin: 3em 1em 0 8em;}
 .table > div > div{ height: 12ch; padding: 0 1px; font-size: 21px; }
 dl{ height: 17ch; margin: 0; }
 footer{ margin: 0 1em 3em 2em; }
-/* How this works is each column is actually a table row. The following CSS rotates and transforms the table so it looks normal. */
-/* table { transform: rotate(90deg) scaleY(-1) }
-table th,
-table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); } */
-/*table th { transform: rotate(-90deg) scaleY(1) scaleX(-1) rotate(-45deg); }*/
-/* main { transform: translateX(32ch) translateY(-50ch); } */
-
-/*th { max-width: 5vw; max-height: 10vw; }*/
-/* td { width: 17ch; height: 17ch; }
-table { border-spacing: 1px 4px; } */
-
-/*th { font-size: x-large; }*/
 dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
 
-/* td { text-align: center; } */
-
-td:hover[class] {
-    /* Scale the squares to be bigger when we hover over a table vell */
+/* td:hover[class] {
+    /* Scale the squares to be bigger when we hover over a table vell
     transform: rotate(-90deg) scaleY(1) scaleX(-1) scale(1.2);
     border: 2px solid maroon;
 }
-
-td[class] { transition: 1s; }
-
-/*
-td { --left-padding: 0.5vw; }
-time { display: block; text-align: left; padding-left: var(--left-padding); position: absolute; top: 0.5vw; }
-dt { font-size: xxx-large; font-weight: bold; text-align: center;}
-dd { display: block; margin-inline-start: 0px; position: relative; padding-left: var(--left-padding);*//* text-align: center; }*/
+td[class] { transition: 1s; } */
 
 /* Colors */
 dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1ch 1ch rgba(255,255,255,.2);}
@@ -63,11 +42,6 @@ dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1
 .none { --color: #0d0d0d; --text: white;}
 .proposal { --color: #7a0400; --text: white;}
 .chrome.inprogress { --color: #FD5602; --text: black;}
-
-/* td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; } */
-/* Reduce hit area sie of dd */
-/* td dd { display: inline; } */
-
 .key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
 <header>
