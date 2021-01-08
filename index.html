@@ -7,37 +7,56 @@
     <a class="github-fork-ribbon left-top" href="https://github.com/CrazyPython/wwwperiodictable" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
       <meta name="robots" content="index, follow">
 <style>
-*{ box-sizing:border-box; }
-body{padding:0 1em}
+*{ box-sizing: border-box; }
+html,body{margin: 0; padding: 0; }
+header{margin: 3em 1em 0 8em;}
 .container{
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    margin: 2em 0;
+    margin: 2em 0 4em 0;
 }
+/* If you're adding another column, change the numer of repeats in grid-template-columns */
 .table{
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(14,minmax(17ch,1fr));
+    text-align: center;
+    padding: 0 1em;
 }
-
+.table > div > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table > div > div{
+    height: 12ch;
+    padding: 0 1px;
+    font-size: 21px;
+}
+dl{ 
+    height: 17ch; 
+    margin: 0; 
+}
+footer{ margin: 0 1em 3em 2em; }
 /* How this works is each column is actually a table row. The following CSS rotates and transforms the table so it looks normal. */
-table { transform: rotate(90deg) scaleY(-1) }
+/* table { transform: rotate(90deg) scaleY(-1) }
 table th,
-table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
+table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); } */
 /*table th { transform: rotate(-90deg) scaleY(1) scaleX(-1) rotate(-45deg); }*/
 /* main { transform: translateX(32ch) translateY(-50ch); } */
 
 /*th { max-width: 5vw; max-height: 10vw; }*/
-td { width: 17ch; height: 17ch; }
-table { border-spacing: 1px 4px; }
+/* td { width: 17ch; height: 17ch; }
+table { border-spacing: 1px 4px; } */
 body { font-family: Arial, sans-serif; }
 
 /*th { font-size: x-large; }*/
 dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
 
-td { text-align: center; }
+/* td { text-align: center; } */
 
 td:hover[class] {
     /* Scale the squares to be bigger when we hover over a table vell */
@@ -54,8 +73,8 @@ dt { font-size: xxx-large; font-weight: bold; text-align: center;}
 dd { display: block; margin-inline-start: 0px; position: relative; padding-left: var(--left-padding);*//* text-align: center; }*/
 
 /* Colors */
-td { background-color: var(--color); color: var(--text); outline: 1px solid var(--color); }
-table a { color: inherit; }
+dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1ch 1ch rgba(255,255,255,.2);}
+.table a { color: inherit; }
 .other { --color: darkmagenta;  --text: white; } /* default/other */
 .all { --color: #62BD69; --text: black; }
 .allbutie11 { --color:  #237948; --text: white;}
@@ -68,13 +87,13 @@ table a { color: inherit; }
 .proposal { --color: #7a0400; --text: white;}
 .chrome.inprogress { --color: #FD5602; --text: black;}
 
-td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; }
+/* td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; } */
 /* Reduce hit area sie of dd */
-td dd { display: inline; }
+/* td dd { display: inline; } */
 
 .key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
-<header style="margin-left: 7em;">
+<header>
     <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
     <h2>Periodic Table of Web APIs v0.0.1</h2>
     <h3>Map of Web APIs/Technologies</h3>
@@ -96,7 +115,7 @@ td dd { display: inline; }
     <div class="container">
         <div class="table">
             <div>
-                <h4>Markup</h4>
+                <div><h4>Markup</h4></div>
                 <dl class="all">
                     <a href="https://caniuse.com/?search=xhtml"></a>
                     <time><a href="https://www.w3.org/TR/2010/NOTE-xhtml2-20101216/">2010</a></time>
@@ -128,7 +147,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Offline</h4>
+                <div><h4>Offline</h4></div>
                 <dl class="all">
                     <time>2017</time>
                     <dt>Hc</dt>
@@ -171,7 +190,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Image</h4>
+                <div><h4>Image</h4></div>
                 <dl class=all>
                     <time>1993</time>
                     <dt>Gif</dt>
@@ -199,7 +218,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Style</h4>
+                <div><h4>Style</h4></div>
                 <dl>
                 </dl>
                 <dl class="all">
@@ -229,7 +248,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Persistence</h4>
+                <div><h4>Persistence</h4></div>
                 <dl class="all">
                     <time>2020</time>
                     <dt>Co</dt>
@@ -259,7 +278,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Interactive/Dynamic<br>Scripts</h4>
+                <div><h4>Interactive / Dynamic<br>Scripts</h4></div>
                 <dl class="all">
                     <time>2014</time>
                     <dt>Js</dt>
@@ -298,7 +317,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Network API</h4>
+                <div><h4>Network API</h4></div>
                 <dl class="all">
                     <time>2016</time>
                     <dt>Xhr</dt>
@@ -331,7 +350,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Social</h4>
+                <div><h4>Social</h4></div>
                 <dl class="all">
                     <time><br/></time>
                     <dt><a href="mailto:jamtlu@gmail.com">Smtp</a></dt>
@@ -366,7 +385,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Semantic &amp; Metadata</h4>
+                <div><h4>Semantic &amp; Metadata</h4></div>
                 <dl class="all">
                     <time>1999</time>
                     <dt>Hd</dt>
@@ -389,7 +408,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Authentication</h4>
+                <div><h4>Authentication</h4></div>
                 <dl class=all>
                     <time><a href="https://tools.ietf.org/html/rfc7235">2014</a></time>
                     <dt>Ba</dt>
@@ -407,7 +426,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Graphics API</h4>
+                <div><h4>Graphics API</h4></div>
                 <dl class="none proprietary">
                     <time>2020</time>
                     <dt>Fl</dt>
@@ -442,7 +461,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Sensors</h4>
+                <div><h4>Sensors</h4></div>
                 <dl></dl>
                 <dl class=chrome>
                     <time>2018</time>
@@ -471,7 +490,7 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Hardware</h4>
+                <div><h4>Hardware</h4></div>
                 <dl></dl>
                 <dl class=chrome>
                     <time>2020</time>
@@ -505,26 +524,26 @@ td dd { display: inline; }
                 </dl>
             </div>
             <div>
-                <h4>Operating System</h4>
+                <div><h4>Operating System</h4></div>
                 <dl></dl>
             </div>
         </div>
     </div>
 </main>
-<div>
-<h3>How is it organized?</h3>
-<p>Just like a real periodic table, the positioning has a meaning.</p>
+<footer>
+    <h3>How is it organized?</h3>
+    <p>Just like a real periodic table, the positioning has a meaning.</p>
 
-<p>The columns are organized left-to-right by the date an API in that column was first implemented. Older first. <br>
-The rows are organized by the date they were first proposed.</p>
+    <p>The columns are organized left-to-right by the date an API in that column was first implemented. Older first. <br>
+    The rows are organized by the date they were first proposed.</p>
 
-<p>The first row represents technologies that still work, but are superseded or obsoleted by newer technologies. <br>
-The second-to-last row is deprecated or abandoned APIs. These may have been implemented before and removed, or only partly implemented.<br>
-The last row is for APIs that only ever worked in one browser. Many of these are proprietary or vendor-specific APIs.</p>
+    <p>The first row represents technologies that still work, but are superseded or obsoleted by newer technologies. <br>
+    The second-to-last row is deprecated or abandoned APIs. These may have been implemented before and removed, or only partly implemented.<br>
+    The last row is for APIs that only ever worked in one browser. Many of these are proprietary or vendor-specific APIs.</p>
 
-<p>The darkness and lightness represents the browser support of an API. The redness represents how active an API's proposal or specification is.</p>
-<h3>What do the colors represent?</h3>
-<p>The lighter the color, the more support there is.</p>
-<p>The red represents how active the specification or proposal is.</p>
-</div>
+    <p>The darkness and lightness represents the browser support of an API. The redness represents how active an API's proposal or specification is.</p><br>
+    <h3>What do the colors represent?</h3>
+    <p>The lighter the color, the more support there is.</p>
+    <p>The red represents how active the specification or proposal is.</p>
+</footer>
 </html>
