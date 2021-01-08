@@ -12,8 +12,7 @@ table { transform: rotate(90deg) scaleY(-1) }
 table th,
 table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
 /*table th { transform: rotate(-90deg) scaleY(1) scaleX(-1) rotate(-45deg); }*/
-body { margin-left: 8em; }
-main { transform: translateX(32ch) translateY(-50ch); }
+/* main { transform: translateX(32ch) translateY(-50ch); } */
 
 /*th { max-width: 5vw; max-height: 10vw; }*/
 td { width: 17ch; height: 17ch; }
@@ -61,23 +60,24 @@ td dd { display: inline; }
 
 .key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
-<div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
-<h2>Periodic Table of Web APIs v0.0.1</h2>
-<h3>Map of Web APIs/Technologies</h3>
-<div class="key">
-    <h3>Key</h3>
-    <div class="all"> Supported by all browsers including IE11</div>
-    <div class="allbutie11"> Supported by all browsers</div>
-    <div class="somebrowsers"> Supported by two modern browsers</div>
-    <div class="inprogress"> Implementation is in progress</div>
-    <div class="proposal"> Being discussed or proposed</div>
-    <div class="partial"> Partial support</div>
-    <div class="none"> No support</div>
-    <div class="chrome"> Supported only by Google Chrome</div>
-    <div class="chrome inprogress"> Implementation in progress in Google Chrome</div>
-    <div class="proprietary"> Proprietary</div>
-    <div class="other"> Other</div>
-</div>
+<header style="margin-left: 8em;">
+    <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
+    <h2>Periodic Table of Web APIs v0.0.1</h2>
+    <h3>Map of Web APIs/Technologies</h3>
+    <div class="key">
+        <h3>Key</h3>
+        <div class="all"> Supported by all browsers including IE11</div>
+        <div class="allbutie11"> Supported by all browsers</div>
+        <div class="somebrowsers"> Supported by two modern browsers</div>
+        <div class="proposal"> Being discussed or proposed</div>
+        <div class="inprogress"> Implementation is in progress</div>
+        <div class="partial"> Partial support</div>
+        <div class="none"> No support</div>
+        <div class="chrome inprogress"> Implementation in progress in Google Chrome</div>
+        <div class="chrome"> Supported only by Google Chrome</div>
+        <div class="proprietary"> Proprietary</div>
+    </div>
+</header>
 <main>
     <table>
         <thead>
@@ -513,7 +513,7 @@ td dd { display: inline; }
         </tbody>
     </table>
 </main>
-<div style="position: relative; bottom: 90ch">
+<div>
 <h3>How is it organized?</h3>
 <p>Just like a real periodic table, the positioning has a meaning.</p>
 
