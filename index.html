@@ -1,48 +1,36 @@
 <!doctype HTML>
 <html lang=en>
-    <!-- Hi there, kind visitor! If you scroll down to <table>, you'll find nicely written markup. Feel free to contribute! -->
+    <!-- Hi there, kind visitor! If you scroll down to .table, you'll find nicely written markup. Feel free to contribute! -->
     <title>Periodic Table of Web APIs</title>
     <meta name="keywords" content="web, www, visualization, map, perodic, api, html, css, javascript">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
     <a class="github-fork-ribbon left-top" href="https://github.com/CrazyPython/wwwperiodictable" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
       <meta name="robots" content="index, follow">
 <style>
-/* How this works is each column is actually a table row. The following CSS rotates and transforms the table so it looks normal. */
-table { transform: rotate(90deg) scaleY(-1) }
-table th,
-table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); }
-/*table th { transform: rotate(-90deg) scaleY(1) scaleX(-1) rotate(-45deg); }*/
-body { margin-left: 8em; }
-main { transform: translateX(32ch) translateY(-50ch); }
-
-/*th { max-width: 5vw; max-height: 10vw; }*/
-td { width: 17ch; height: 17ch; }
-table { border-spacing: 1px 4px; }
-body { font-family: Arial, sans-serif; }
-
-/*th { font-size: x-large; }*/
+*{ box-sizing: border-box; }
+html,body{ margin: 0; padding: 0; }
+body{ font-family: Arial, sans-serif; }
+header{ margin: 3em 1em 0 8em;}
+.container{ overflow-x: auto; display: flex; flex-direction: column; margin: 2em 0 4em 0; }
+/* If you're adding another column, change the numer of repeats in grid-template-columns */
+.table{ display: grid; grid-auto-flow: column; grid-template-columns: repeat(14,minmax(17ch,1fr)); text-align: center; padding: 0 1em; }
+.table > div > *{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.table > div > div{ height: 12ch; padding: 0 1px; font-size: 21px; }
+dl{ height: 17ch; margin: 0; }
+footer{ margin: 0 1em 3em 2em; }
 dt { font-size: xxx-large; font-weight: bold; }
 dd { margin-inline-start: 0px; }
 
-td { text-align: center; }
-
-td:hover[class] {
-    /* Scale the squares to be bigger when we hover over a table vell */
+/* td:hover[class] {
+    /* Scale the squares to be bigger when we hover over a table vell
     transform: rotate(-90deg) scaleY(1) scaleX(-1) scale(1.2);
     border: 2px solid maroon;
 }
-
-td[class] { transition: 1s; }
-
-/*
-td { --left-padding: 0.5vw; }
-time { display: block; text-align: left; padding-left: var(--left-padding); position: absolute; top: 0.5vw; }
-dt { font-size: xxx-large; font-weight: bold; text-align: center;}
-dd { display: block; margin-inline-start: 0px; position: relative; padding-left: var(--left-padding);*//* text-align: center; }*/
+td[class] { transition: 1s; } */
 
 /* Colors */
-td { background-color: var(--color); color: var(--text); outline: 1px solid var(--color); }
-table a { color: inherit; }
+dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1ch 1ch rgba(255,255,255,.2);}
+.table a { color: inherit; }
 .other { --color: darkmagenta;  --text: white; } /* default/other */
 .all { --color: #62BD69; --text: black; }
 .allbutie11 { --color:  #237948; --text: white;}
@@ -54,479 +42,460 @@ table a { color: inherit; }
 .none { --color: #0d0d0d; --text: white;}
 .proposal { --color: #7a0400; --text: white;}
 .chrome.inprogress { --color: #FD5602; --text: black;}
-
-td > a { display: block; height: 100%; width: 100%; top: 0; position: absolute; z-index: -1; }
-/* Reduce hit area sie of dd */
-td dd { display: inline; }
-
 .key div::before { content: ""; display: inline-block; height: 1em; width: 1em; background-color: var(--color); }
 </style>
-<div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
-<h2>Periodic Table of Web APIs v0.0.1</h2>
-<h3>Map of Web APIs/Technologies</h3>
-<div class="key">
-    <h3>Key</h3>
-    <div class="all"> Supported by all browsers including IE11</div>
-    <div class="allbutie11"> Supported by all browsers</div>
-    <div class="somebrowsers"> Supported by two modern browsers</div>
-    <div class="inprogress"> Implementation is in progress</div>
-    <div class="proposal"> Being discussed or proposed</div>
-    <div class="partial"> Partial support</div>
-    <div class="none"> No support</div>
-    <div class="chrome"> Supported only by Google Chrome</div>
-    <div class="chrome inprogress"> Implementation in progress in Google Chrome</div>
-    <div class="proprietary"> Proprietary</div>
-    <div class="other"> Other</div>
-</div>
+<header>
+    <div style="position: absolute; top: 1vw; right: 1vw;">By James Lu</div>
+    <h2>Periodic Table of Web APIs v0.0.1</h2>
+    <h3>Map of Web APIs/Technologies</h3>
+    <div class="key">
+        <h3>Key</h3>
+        <div class="all"> Supported by all browsers including IE11</div>
+        <div class="allbutie11"> Supported by all browsers</div>
+        <div class="somebrowsers"> Supported by two modern browsers</div>
+        <div class="inprogress"> Implementation is in progress</div>
+        <div class="proposal"> Being discussed or proposed</div>
+        <div class="partial"> Partial support</div>
+        <div class="none"> No support</div>
+        <div class="chrome"> Supported only by Google Chrome</div>
+        <div class="chrome inprogress"> Implementation in progress in Google Chrome</div>
+        <div class="proprietary"> Proprietary</div>
+        <div class="other">Other</div>
+    </div>
+</header>
 <main>
-    <table>
-        <thead>
-            <tr>
-                <th colspan=12 style="display: block; writing-mode: vertical-rl; text-orientation: sideways;">Age</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Markup</th>
-                <td class="all">
+    <div class="container">
+        <div class="table">
+            <div>
+                <div><h4>Markup</h4></div>
+                <dl class="all">
                     <a href="https://caniuse.com/?search=xhtml"></a>
                     <time><a href="https://www.w3.org/TR/2010/NOTE-xhtml2-20101216/">2010</a></time>
                     <dt><a href="https://www.cnet.com/news/an-epitaph-for-the-web-standard-xhtml-2/">Xhtml</a></dt>
                     <dd><a href="https://www.w3schools.com/html/html_xhtml.asp">XHTML</a></dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time><a href="https://html.spec.whatwg.org/multipage/">2020</a></time>
                     <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">Ht</a></dt>
                     <dd><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML5</a> documents</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2011</time>
                     <dt>Svg</dt>
                     <dd>SVG1.1 vector graphics and document layout</dd>
-                </td>
-                <td class="partial">
+                </dl>
+                <dl class="partial">
                     <a href="https://caniuse.com/?search=mathml"></a>
                     <time><a href="https://www.w3.org/TR/MathML3/">2014</a></time>
                     <dt>Ma</dt>
                     <dd><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML3.0</a></dd>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td class="partial">
+                </dl>
+                <dl></dl>
+                <dl></dl>
+                <dl class="partial">
                     <time>2018</time>
-                     <dt>Svg2</dt>
-                     <dd><a href="https://www.w3.org/TR/SVG2/">SVG2</a></dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Offline</th>
-                <td class="all">
+                    <dt>Svg2</dt>
+                    <dd><a href="https://www.w3.org/TR/SVG2/">SVG2</a></dd>
+                </dl>
+            </div>
+            <div>
+                <div><h4>Offline</h4></div>
+                <dl class="all">
                     <time>2017</time>
                     <dt>Hc</dt>
                     <dd>HTTP Cache-Control, ETag</dd>
-                </td>
-                <td class="somebrowsers">
+                </dl>
+                <dl class="somebrowsers">
                     <time>2020</time>
                     <dt>Ni</dt>
                     <dd>Network status (wifi, cellular, offline)</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2020</time>
                     <dt>Sw</dt>
                     <dd>Service Workers</dd>
-                </td>
-                <td class="somebrowsers">
+                </dl>
+                <dl class="somebrowsers">
                     <time>2020</time>
                     <dt>Pwa</dt>
                     <dd>Add to home screen</dd>
-                </td>
-                <td class="somebrowsers">
+                </dl>
+                <dl class="somebrowsers">
                     <time>2020</time>
                     <dt>Pu</dt>
                     <dd>Push API</dd>
-                </td>
-                <td class="chrome">
+                </dl>
+                <dl class="chrome">
                     <time>2020</time>
                     <dt>Bgs</dt>
                     <dd>Background Sync</dd>
-                </td>
-                <td class="deprecated none">
+                </dl>
+                <dl class="deprecated none">
                     <time>2020</time>
                     <dt>Ac</dt>
                     <dd>Application Cache</dd>
-                </td>
-                <td class="depcreated chrome none">
+                </dl>
+                <dl class="depcreated chrome none">
                     <time>2010</time>
                     <dt>Ge</dt>
                     <dd>Gears</dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td class=all>
+                </dl>
+            </div>
+            <div>
+                <div><h4>Image</h4></div>
+                <dl class=all>
                     <time>1993</time>
                     <dt>Gif</dt>
                     <dd><br/></dd>
-                </td>
-                <td class=all>
+                </dl>
+                <dl class=all>
                     <time>1996</time>
                     <dt>Png</dt>
                     <dd><br/></dd>
-                </td>
-                <td class=all>
+                </dl>
+                <dl class=all>
                     <time></time>
                     <dt>Jpg</dt>
                     <dd><br/></dd>
-                </td>
-                <td class=allbutie11>
+                </dl>
+                <dl class=allbutie11>
                     <time>2020</time>
                     <dt><a href="https://developers.google.com/speed/webp/gallery1">P</a></dt>
                     <dd>WebP</dd>
-                </td>
-                <td class=chrome>
+                </dl>
+                <dl class=chrome>
                     <time>2020</time>
                     <dt>Av</dt>
                     <dd>AVIF</dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Style</th>
-                <td>
-                </td>
-                <td class="all">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Style</h4></div>
+                <dl>
+                </dl>
+                <dl class="all">
                     <time>2015</time>
                     <dt>Css</dt>
                     <dd>CSS</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2017</time>
                     <dt>Lt</dt>
                     <dd><a href="https://developer.mozilla.org/en-US/docs/Web/XSLT">XSLT</a></dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time><a href="https://www.w3.org/TR/css-grid-1/">20</a><a href="https://www.w3.org/TR/css-flexbox-1/">20</a></time>
                     <dt><a href="https://www.cssgridplayground.com/">L</a><a href="https://yogalayout.com/playground/">y</a></dt>
                     <dd>CSS <a href="https://www.cssgridplayground.com/">Grid</a> and <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a></dd>
-                </td>
-                <td class="proposal">
+                </dl>
+                <dl class="proposal">
                     <time>2020</time>
                     <dt>C4</dt>
                     <dd><a href="https://www.w3.org/TR/selectors-4/">Selectors Level 4, Lists and Counters Level 3</a></dd>
-                </td>
-                <td class="somebrowsers">
+                </dl>
+                <dl class="somebrowsers">
                     <time>2020</time>
                     <dt>Ho</dt>
                     <dd><a href="https://developer.mozilla.org/en-US/docs/Web/Houdini">CSS Houdini</a></dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Persistence</th>
-                <td class="all">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Persistence</h4></div>
+                <dl class="all">
                     <time>2020</time>
                     <dt>Co</dt>
                     <dd>Cookies</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2016</time>
                     <dt>Ls</dt>
                     <dd>LocalStorage</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2020</time>
                     <dt>Idb</dt>
                     <dd>IndexedDB</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2020</time>
                     <dt>Fs</dt>
                     <dd>FileSystem API</dd>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td class="none">
+                </dl>
+                <dl></dl>
+                <dl></dl>
+                <dl class="none">
                     <time>2010</time>
                     <dt>Sql</dt>
                     <dd>WebSQL</dd>
-                </td>
-            </tr>
-             <tr>
-                 <th>Interactive/Dynamic<br>Scripts</th>
-                <td class="all">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Interactive / Dynamic<br>Scripts</h4></div>
+                <dl class="all">
                     <time>2014</time>
                     <dt>Js</dt>
                     <dd>JavaScript</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2018</time>
                     <dt>Es</dt>
                     <dd><code>=&gt;</code> <code>WeakMap</code> <code>Proxy</code> <code>import</code> <code>class</code> <code>async</code> <code>...</code></dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2020</time>
                     <dt>Wa</dt>
                     <dd>WASM</dd>
-                </td>
-                <td class="somebrowsers">
+                </dl>
+                <dl class="somebrowsers">
                     <time>2020</time>
                     <dt>Nx</dt>
                     <dd>ES.Next <code>Intl</code> <code>WeakRef</code> <code>Atomics</code> <code>??</code> <code>||=</code></dd>
-                </td>
-                <td class="proposal">
+                </dl>
+                <dl class="proposal">
                     <time><a href="https://docs.google.com/presentation/d/1kqtsJfLVC-Nmcm2sveMRdJPjurwKKiiCGilK2_ladpw/edit?usp=gmail&gxids=7628#slide=id.p">2020</a></time>
                     <dt>Co</dt>
                     <dd>Concurrent JS</dd>
-                </td>
-                <td>
-                </td>
-                <td class="deprecated none">
+                </dl>
+                <dl></dl>
+                <dl class="deprecated none">
                     <time>2005</time>
                     <dt>Jx</dt>
                     <dd><a href="https://developer.mozilla.org/en-US/docs/Archive/Web/E4X/Processing_XML_with_E4X">XML in JS (E4X)</a></dd>
-                </td>
-                <td class="deprecated chrome none">
+                </dl>
+                <dl class="deprecated chrome none">
                     <time>2015</time>
                     <dt>Pn</dt>
                     <dd>PNaCL</dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Network API</th>
-                <td class="all">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Network API</h4></div>
+                <dl class="all">
                     <time>2016</time>
                     <dt>Xhr</dt>
                     <dd>XMLHTTPRequest</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2010</time>
                     <dt>Sse</dt>
                     <dd>Server-Sent Events</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2011</time>
                     <dt>Ws</dt>
                     <dd>WebSocket</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2020</time>
                     <dt>Fe</dt>
                     <dd>Fetch: Modernized Xhr</dd>
-                </td>
-                <td class="allbutie11">
+                </dl>
+                <dl class="allbutie11">
                     <time>2020</time>
                     <dt>Rtc</dt>
                     <dd>WebRTC</dd>
-                </td>
-                <td class="proposal">
+                </dl>
+                <dl class="proposal">
                     <time><a href="https://w3c.github.io/webtransport/">2020</a></time>
                     <dt>T</dt>
                     <dd>WebTransport</dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Social</th>
-                <td class="all">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Social</h4></div>
+                <dl class="all">
                     <time><br/></time>
                     <dt><a href="mailto:jamtlu@gmail.com">Smtp</a></dt>
                     <dd>Email</dd>
-                </td>
-                <td class="other">
+                </dl>
+                <dl class="other">
                     <time>2011</time>
                     <dt>Rss</dt>
                     <dd>RSS</dd>
-                </td>
-                <td class="other">
+                </dl>
+                <dl class="other">
                     <time>2017</time>
                     <dt>Mn</dt>
                     <dd>WebMention</dd>
-                </td>
-                <td class="other">
+                </dl>
+                <dl class="other">
                     <time>2018</time>
                     <dt>Sb</dt>
                     <dd>WebSub</dd>
-                </td>
-                <td class="other">
+                </dl>
+                <dl class="other">
                     <time>2018</time>
                     <dt>Ap</dt>
                     <dd>ActivityPub</dd>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td class="proprietary">
+                </dl>
+                <dl></dl>
+                <dl></dl>
+                <dl class="proprietary">
                     <time>2020</time>
                     <dt>Fb</dt>
                     <dd>Facebook</dd>
-                </td>
-            </tr>
-            </tr>
-            <tr>
-                <th>Semantic &amp; Metadata</th>
-                <td class="all">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Semantic &amp; Metadata</h4></div>
+                <dl class="all">
                     <time>1999</time>
                     <dt>Hd</dt>
                     <dd>Last-Modified, Content-Language</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2011</time>
                     <dt>Mt</dt>
                     <dd><code>&lt;meta/&gt;</code> name, keywords, description, http-equiv</dd>
-                </td>
-                <td class="other">
+                </dl>
+                <dl class="other">
                     <time>2018</time>
                     <dt>Mc</dt>
                     <dd>Microdata</dd>
-                </td>
-                <td class="other">
+                </dl>
+                <dl class="other">
                     <time>2020</time>
                     <dt>Owl</dt>
                     <dd>RDF and OWL; <a href="https://solidproject.org">Solid</a></dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Authentication</th>
-                <td class=all>
+                </dl>
+            </div>
+            <div>
+                <div><h4>Authentication</h4></div>
+                <dl class=all>
                     <time><a href="https://tools.ietf.org/html/rfc7235">2014</a></time>
                     <dt>Ba</dt>
                     <dd>Basic Authentication</dd>
-                </td>
-                <td class=other>
+                </dl>
+                <dl class=other>
                     <time><a href="https://tools.ietf.org/html/rfc6749">2012</a></time>
                     <dt>Oa</dt>
                     <dd>OAuth</dd>
-                </td>
-                <td class=allbutie11>
+                </dl>
+                <dl class=allbutie11>
                     <time>2020</time>
                     <dt>Au</dt>
                     <dd>WebAuthn</dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Graphics API</th>
-                <td class="none proprietary">
+                </dl>
+            </div>
+            <div>
+                <div><h4>Graphics API</h4></div>
+                <dl class="none proprietary">
                     <time>2020</time>
                     <dt>Fl</dt>
                     <dd>Flash (now <a href="https://www.adobe.com/products/animate.html">Animate</a>; exports to Svg, C2D, Gl)</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2020</time>
                     <dt>C2D</dt>
                     <dd>Canvas2D</dd>
-                </td>
-                <td class="all">
+                </dl>
+                <dl class="all">
                     <time>2017</time>
                     <dt>Gl</dt>
                     <dd>WebGL</dd>
-                </td>
-                <td class="somebrowsers">
+                </dl>
+                <dl class="somebrowsers">
                     <a href="https://caniuse.com/?search=webgl2"></a>
                     <time>2020</time>
                     <dt>Gl2</dt>
                     <dd>WebGL2</dd>
-                </td>
-                <td class="inprogress">
+                </dl>
+                <dl class="inprogress">
                     <time>2020</time>
                     <dt>Xr</dt>
                     <dd>WebXR Augmented and Virtual Reality</dd>
-                </td>
-                <td class="inprogress">
+                </dl>
+                <dl class="inprogress">
                     <a href="https://github.com/gpuweb/gpuweb/wiki/Implementation-Status"></a>
                     <time>2020</time>
                     <dt>Gpu</dt>
                     <dd><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a></dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Sensors</th>
-                <td>
-                </td>
-                <td class=chrome>
+                </dl>
+            </div>
+            <div>
+                <div><h4>Sensors</h4></div>
+                <dl></dl>
+                <dl class=chrome>
                     <time>2018</time>
                     <dt>Am</dt>
                     <dd>Accelerometer</dd>
-                </td>
-                <td class=chrome>
+                </dl>
+                <dl class=chrome>
                     <time>2018</time>
                     <dt>Gy</dt>
                     <dd>Gyroscope</dd>
-                </td>
-                <td class=chrome>
+                </dl>
+                <dl class=chrome>
                     <time>2018</time>
                     <dt>Mg</dt>
                     <dd>Magnetometer</dd>
-                </td>
-                <td class=chrome>
+                </dl>
+                <dl class=chrome>
                     <time>2018</time>
                     <dt>Ot</dt>
                     <dd>Orientation</dd>
-                </td>
-                <td class=none>
+                </dl>
+                <dl class=none>
                     <time>2019</time>
                     <dt>Al</dt>
                     <dd>Ambient Light</dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Hardware</th>
-                <td>
-                </td>
-                <td class=chrome>
+                </dl>
+            </div>
+            <div>
+                <div><h4>Hardware</h4></div>
+                <dl></dl>
+                <dl class=chrome>
                     <time>2020</time>
                     <dt>Usb</dt>
                     <dd>WebUSB</dd>
-                </td>
-                <td class=allbutie11>
+                </dl>
+                <dl class=allbutie11>
                     <time>2020</time>
                     <dt>Gp</dt>
                     <dd>Gamepad</dd>
-                </td>
-                <td class=chrome>
+                </dl>
+                <dl class=chrome>
                     <time>2015</time>
                     <dt>Midi</dt>
                     <dd>Web MIDI</dd>
-                </td>
-                <td class=chrome>
+                </dl>
+                <dl class=chrome>
                     <time>2020</time>
                     <dt>Bt</dt>
                     <dd>Web Bluetooth</dd>
-                </td>
-                <td class="inprogress">
+                </dl>
+                <dl class="inprogress">
                     <time><a href="https://w3c.github.io/web-nfc/">2020</a></time>
                     <dt>Nfc</dt>
                     <dd>Web NFC</dd>
-                </td>
-                <td class="chrome inprogress">
+                </dl>
+                <dl class="chrome inprogress">
                     <time><a href="https://wicg.github.io/serial/">2020</a></time>
                     <dt>Sr</dt>
                     <dd><a href="https://codelabs.developers.google.com/codelabs/web-serial/?hl=ro#0">Web Serial API</a></dd>
-                </td>
-            </tr>
-            <tr>
-                <th>Operating System</th>
-                <td>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </dl>
+            </div>
+            <div>
+                <div><h4>Operating System</h4></div>
+                <dl></dl>
+            </div>
+        </div>
+    </div>
 </main>
-<div style="position: relative; bottom: 90ch">
-<h3>How is it organized?</h3>
-<p>Just like a real periodic table, the positioning has a meaning.</p>
+<footer>
+    <h3>How is it organized?</h3>
+    <p>Just like a real periodic table, the positioning has a meaning.</p>
 
-<p>The columns are organized left-to-right by the date an API in that column was first implemented. Older first. <br>
-The rows are organized by the date they were first proposed.</p>
+    <p>The columns are organized left-to-right by the date an API in that column was first implemented. Older first. <br>
+    The rows are organized by the date they were first proposed.</p>
 
-<p>The first row represents technologies that still work, but are superseded or obsoleted by newer technologies. <br>
-The second-to-last row is deprecated or abandoned APIs. These may have been implemented before and removed, or only partly implemented.<br>
-The last row is for APIs that only ever worked in one browser. Many of these are proprietary or vendor-specific APIs.</p>
+    <p>The first row represents technologies that still work, but are superseded or obsoleted by newer technologies. <br>
+    The second-to-last row is deprecated or abandoned APIs. These may have been implemented before and removed, or only partly implemented.<br>
+    The last row is for APIs that only ever worked in one browser. Many of these are proprietary or vendor-specific APIs.</p>
 
-<p>The darkness and lightness represents the browser support of an API. The redness represents how active an API's proposal or specification is.</p>
-<h3>What do the colors represent?</h3>
-<p>The lighter the color, the more support there is.</p>
-<p>The red represents how active the specification or proposal is.</p>
-</div>
+    <p>The darkness and lightness represents the browser support of an API. The redness represents how active an API's proposal or specification is.</p><br>
+    <h3>What do the colors represent?</h3>
+    <p>The lighter the color, the more support there is.</p>
+    <p>The red represents how active the specification or proposal is.</p>
+</footer>
 </html>
