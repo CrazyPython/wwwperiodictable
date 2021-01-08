@@ -8,37 +8,15 @@
       <meta name="robots" content="index, follow">
 <style>
 *{ box-sizing: border-box; }
-html,body{margin: 0; padding: 0; }
-header{margin: 3em 1em 0 8em;}
-.container{
-    overflow-x: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 2em 0 4em 0;
-}
+html,body{ margin: 0; padding: 0; }
+body{ font-family: Arial, sans-serif; }
+header{ margin: 3em 1em 0 8em;}
+.container{ overflow-x: auto; display: flex; flex-direction: column; margin: 2em 0 4em 0; }
 /* If you're adding another column, change the numer of repeats in grid-template-columns */
-.table{
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(14,minmax(17ch,1fr));
-    text-align: center;
-    padding: 0 1em;
-}
-.table > div > *{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.table > div > div{
-    height: 12ch;
-    padding: 0 1px;
-    font-size: 21px;
-}
-dl{ 
-    height: 17ch; 
-    margin: 0; 
-}
+.table{ display: grid; grid-auto-flow: column; grid-template-columns: repeat(14,minmax(17ch,1fr)); text-align: center; padding: 0 1em; }
+.table > div > *{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.table > div > div{ height: 12ch; padding: 0 1px; font-size: 21px; }
+dl{ height: 17ch; margin: 0; }
 footer{ margin: 0 1em 3em 2em; }
 /* How this works is each column is actually a table row. The following CSS rotates and transforms the table so it looks normal. */
 /* table { transform: rotate(90deg) scaleY(-1) }
@@ -50,7 +28,6 @@ table td { transform: rotate(-90deg) scaleY(1) scaleX(-1); } */
 /*th { max-width: 5vw; max-height: 10vw; }*/
 /* td { width: 17ch; height: 17ch; }
 table { border-spacing: 1px 4px; } */
-body { font-family: Arial, sans-serif; }
 
 /*th { font-size: x-large; }*/
 dt { font-size: xxx-large; font-weight: bold; }
