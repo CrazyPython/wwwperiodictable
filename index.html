@@ -3,25 +3,28 @@
     <!-- Hi there, kind visitor! If you scroll down to .table, you'll find nicely written markup. Feel free to contribute! -->
     <title>Periodic Table of Web APIs</title>
     <meta name="keywords" content="web, www, visualization, map, perodic, api, html, css, javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://wwwperiodictable.surge.sh/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
     <a class="github-fork-ribbon left-top" href="https://github.com/CrazyPython/wwwperiodictable" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
       <meta name="robots" content="index, follow">
 <style>
 *{ box-sizing: border-box; }
-html,body{ margin: 0; padding: 0; }
-body{ font-family: Arial, sans-serif; }
-header{ margin: 3em 1em 0 8em;}
-.container{ overflow-x: auto; display: flex; flex-direction: column; margin: 2em 0 4em 0; }
+html{font-size: 14px;}
+@media(min-width:768px){html{font-size: 16px;}}
+html,body{ margin: 0; padding: 0;}
+body{ font-family: Arial, sans-serif;}
+header{ margin: 3rem 1em 0 7rem;}
+.container{ overflow-x: auto; display: flex; flex-direction: column; margin: 2rem 0 4rem 0; }
 /* If you're adding another column, change the numer of repeats in grid-template-columns */
-.table{ display: grid; grid-auto-flow: column; grid-template-columns: repeat(14,minmax(17ch,1fr)); text-align: center; padding: 0 1em; }
-.table > div > *{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.table > div > div{ height: 12ch; padding: 0 1px; font-size: 21px; }
-dl{ height: 17ch; margin: 0; }
-footer{ margin: 0 1em 3em 2em; }
-dt { font-size: xxx-large; font-weight: bold; }
-dd { margin-inline-start: 0px; }
-
+.table{ display: grid; grid-auto-flow: column; grid-template-columns: repeat(14,minmax(8rem,1fr)); text-align: center; padding: 0 1rem; }
+.table > div > *{ display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 1px;}
+.table > div > div{ height: 6rem;}
+dl{ height: 8rem; margin: 0; }
+footer{ margin: 0 1rem 3rem 2rem; }
+dt { font-size: xx-large; font-weight: bold; }
+dd { margin-inline-start: 0px;}
+dd,time {font-size: smaller;}
 /* td:hover[class] {
     /* Scale the squares to be bigger when we hover over a table vell
     transform: rotate(-90deg) scaleY(1) scaleX(-1) scale(1.2);
