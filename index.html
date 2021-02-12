@@ -43,6 +43,7 @@ dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1
 .proprietary { --color: dodgerblue; --text: black;} 
 .partial { --color: slategray; --text: black;}
 .inprogress { --color: #ba2420; --text: white;}
+.deprecated { --color: #0d0d0d; --text: white;} /* TODO: Seperate color and legend for deprecated APIs" */
 .none { --color: #0d0d0d; --text: white;}
 .proposal { --color: #7a0400; --text: white;}
 .chrome.inprogress { --color: #FD5602; --text: black;}
@@ -453,6 +454,14 @@ dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1
                     <time>2021</time>
                     <dt>Gpu</dt>
                     <dd><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a></dd>
+                </dl>
+                <dl></dl>
+                <dl></dl>
+                <dl class=deprecated>
+                    <a href="https://caniuse.com/webvr"></a>
+                    <time><a href="https://immersive-web.github.io/webvr/spec/1.1/">2017</a></time>
+                    <dt><a href="https://experiments.withgoogle.com/collection/webvr">Vr</a></dt>
+                    <dd><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR</a></dd>
                 </dl>
             </div>
             <div>
