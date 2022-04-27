@@ -58,7 +58,7 @@ dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1
     <div class="key">
         <h3>Key</h3>
         <div class="all"> Supported by all browsers including IE11</div>
-        <div class="allbutie11"> Supported by all browsers</div>
+        <div class="allbutie11"> Supported by all browsers<a href="#faq-allbutie11"><sup>1</sup></a></div>
         <div class="somebrowsers"> Supported by two modern browsers</div>
         <div class="inprogress"> Implementation is in progress</div>
         <div class="proposal"> Being discussed or proposed</div>
@@ -282,7 +282,7 @@ dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1
                 <dl class="somebrowsers">
                     <time>2021</time>
                     <dt>Nx</dt>
-                    <dd>ES.Next <code>Intl</code> <code>WeakRef</code> <code>Atomics</code> <code>??</code> <code>||=</code></dd>
+                    <dd>ES.Next <code>Intl</code> <code>WeakRef</code> <code>Atomics</code> <code>?.</code> <code>??</code> <code>||=</code></dd>
                 </dl>
                 <dl class="proposal">
                     <time><a href="https://docs.google.com/presentation/d/1kqtsJfLVC-Nmcm2sveMRdJPjurwKKiiCGilK2_ladpw/edit?usp=gmail&gxids=7628#slide=id.p">2020</a></time>
@@ -590,5 +590,8 @@ dl { background-color: var(--color); color: var(--text); box-shadow: inset 1ch 1
     <h3>What do the colors represent?</h3>
     <p>The lighter the color, the more support there is.</p>
     <p>The red represents how active the specification or proposal is.</p>
+    
+    <h3 id="faq-allbutie11"><sup>1</sup>What does "supported by all browsers" mean?</h3>
+    <p>As many as 3% of all Chrome users are still on Chrome 79-84 (two versions ago as of this writing) and sites will break for them if unsupported features are used.</p>
 </footer>
 </html>
